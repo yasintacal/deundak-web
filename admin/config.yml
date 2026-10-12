@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "kamp"
+public_folder: "kamp"
+
+collections:
+  - name: "raporlar"
+    label: "Faaliyet Raporları"
+    folder: "raporlar"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Faaliyet Başlığı", name: "title", widget: "string"}
+      - {label: "Kategori (Tırmanış, Kamp, Yürüyüş)", name: "kategori", widget: "string"}
+      - {label: "Tarih", name: "date", widget: "datetime"}
+      - {label: "Bölge / Konum", name: "konum", widget: "string"}
+      - {label: "PDF Rapor Dosyası", name: "dosya", widget: "file"}
+      - {label: "Açıklama / Detay", name: "body", widget: "markdown"}
+
+  - name: "yonetim"
+    label: "Yönetim Kadrosu"
+    folder: "data/yonetim"
+    create: true
+    fields:
+      - {label: "Ad Soyad", name: "name", widget: "string"}
+      - {label: "Görevi", name: "role", widget: "string"}
+      - {label: "Fotoğraf", name: "image", widget: "image"}

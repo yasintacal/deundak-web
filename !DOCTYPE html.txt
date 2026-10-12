@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEÜNDAK - Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E64C8',
+                            dark: '#0B132B',
+                            slate: '#1C2541',
+                            accent: '#3A86FF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- NAVİGASYON -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full border-2 border-brand-accent/50 overflow-hidden bg-white p-0.5 flex items-center justify-center">
+                    <img src="logo.jpg" alt="DEÜNDAK Logo" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider text-white group-hover:text-brand-accent transition">DEÜNDAK</span>
+                    <span class="block text-[10px] text-slate-400 font-medium tracking-tight">Dokuz Eylül Üniversitesi • 1998</span>
+                </div>
+            </a>
+
+            <!-- Masaüstü Menü -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#hakkimizda" class="hover:text-white transition">Hakkımızda</a>
+                <a href="#faaliyetler" class="hover:text-white transition">Faaliyetlerimiz</a>
+                <a href="#yonetim" class="hover:text-white transition">Yönetim</a>
+                <a href="#galeri" class="hover:text-white transition">Galeri</a>
+                <a href="#iletisim" class="hover:text-white transition">İletişim</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#hakkimizda" class="block text-slate-300 hover:text-white py-1">Hakkımızda</a>
+            <a href="#faaliyetler" class="block text-slate-300 hover:text-white py-1">Faaliyetlerimiz</a>
+            <a href="#yonetim" class="block text-slate-300 hover:text-white py-1">Yönetim</a>
+            <a href="#galeri" class="block text-slate-300 hover:text-white py-1">Galeri</a>
+            <a href="#iletisim" class="block text-slate-300 hover:text-white py-1">İletişim</a>
+        </div>
+    </header>
+
+    <!-- HERO BÖLÜMÜ -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center pt-24 px-4 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 z-0">
+            <!-- Arka planda efeler2.jpg -->
+            <img src="efeler2.jpg" alt="Tırmanış ve Doğa" class="w-full h-full object-cover opacity-25 filter grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/60 text-xs font-semibold text-brand-accent">
+                <span>Kuruluş: 1998</span>
+                <span>•</span>
+                <span>Tescil: 21.03.2019</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Doğada bireysel olarak var olmayı, kolektif bilinci ve dayanışmayı güçlendiriyoruz. Doğaya saygı ve spor disipliniyle zirvelerdeyiz.
+            </p>
+
+            <div class="pt-4 flex items-center justify-center gap-4">
+                <a href="#faaliyetler" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-blue hover:bg-brand-accent text-white font-medium text-sm transition shadow-lg shadow-brand-blue/20">
+                    Faaliyetlerimizi İncele
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#iletisim" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium text-sm transition">
+                    Bize Ulaşın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMIZDA BÖLÜMÜ -->
+    <section id="hakkimizda" class="py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 flex justify-center">
+                <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-2xl bg-slate-900 border border-slate-800 p-6 flex items-center justify-center shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-brand-blue/10 rounded-2xl blur-xl group-hover:bg-brand-blue/20 transition"></div>
+                    <!-- Hakkımızda Logosu -->
+                    <img src="logo.jpg" alt="DEÜNDAK Logo" class="relative z-10 w-full h-full object-contain filter drop-shadow-md">
+                </div>
+            </div>
+
+            <div class="md:col-span-7 space-y-6">
+                <div>
+                    <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Topluluk Hakkında</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">1998'den Bugüne Doğadayız</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                    1998 yılında kurulan topluluğumuzun temel amacı, öğrenci arkadaşlarımıza dağcılık sporunu ve doğal yaşamı sevdirmektir. 
+                </p>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    Düzenlediğimiz çeşitli eğitim ve kamplarla, doğada bireysel olarak var olmayı ve en önemlisi doğaya saygı duymayı öğreniyoruz. Bu süreçte hem fiziksel hem de mental gelişimimize katkı sağlarken, etkinliklerimiz aracılığıyla kolektif bilinci güçlendirmeyi ve üyelerimiz arasındaki dayanışmayı artırmayı hedefliyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAALİYETLERİMİZ -->
+    <section id="faaliyetler" class="py-20 px-4 sm:px-6 bg-slate-900/50 border-y border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+                <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Neler Yapıyoruz?</span>
+                <h2 class="text-3xl font-bold text-white">Faaliyet Alanlarımız</h2>
+                <p class="text-slate-400 text-sm">Resmi tüzüğümüz ve disiplinimiz doğrultusunda yürüttüğümüz temel çalışmalar.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="mountain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Spor Tırmanış</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Top-rope ve lider tırmanış teknikleri, yapay tırmanış duvarı antrenmanları ve doğal kaya tırmanışları.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="tent" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Yaz ve Kış Kampçılığı</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Dört mevsim doğa koşullarına uygun kampçılık pratikleri, çadır kurma ve doğada yaşam disiplini.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="flag" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Dağcılık ve Zirve</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Yüksek irtifa zirve tırmanışları, rota planlama, teknik malzeme kullanımı ve klasik dağcılık.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Doğa Yürüyüşleri</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Farklı zorluk derecelerine sahip rotalarda trekking ve hiking parkurları ile dayanıklılık çalışmaları.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YÖNETİM BÖLÜMÜ -->
+    <section id="yonetim" class="py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+            <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Yönetim</span>
+            <h2 class="text-3xl font-bold text-white">Kulüp Yönetimi</h2>
+            <p class="text-slate-400 text-sm">Topluluğumuzu organize eden yönetim kurulu liderliği.</p>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 max-w-sm w-full text-center hover:border-brand-blue/40 transition">
+                <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-800 border-2 border-brand-blue flex items-center justify-center text-slate-400">
+                    <i data-lucide="user" class="w-10 h-10 text-brand-accent"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Zehra Sülün</h3>
+                <p class="text-xs font-semibold text-brand-accent tracking-wider uppercase mt-1">Topluluk Başkanı</p>
+                <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+                    Dokuz Eylül Üniversitesi Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu Yönetim Kurulu Başkanı.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERİ (SENİN FOTOĞRAFLARIN) -->
+    <section id="galeri" class="py-20 px-4 sm:px-6 bg-slate-900/30 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+                <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Kareler</span>
+                <h2 class="text-3xl font-bold text-white">Faaliyet Galerisi</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                    <img src="efeler1.jpg" alt="Efeler Yolu" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                    <img src="efeler2.jpg" alt="Kış Faaliyeti" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                    <img src="kamp1.jpg" alt="Kamp" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
+                    <!-- tirmanis1.jpg için dosya adını kontrol et -->
+                    <img src="tirmanis1.jpg" alt="Kaya Tırmanışı" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='tırmanış1.jpg';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM & ALT BİLGİ -->
+    <footer id="iletisim" class="py-16 px-4 sm:px-6 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start gap-2">
+                    <span class="text-lg font-bold text-white">DEÜNDAK</span>
+                    <span class="text-xs text-slate-500">• 1998</span>
+                </div>
+                <p class="text-xs text-slate-400 max-w-sm">
+                    Dokuz Eylül Üniversitesi Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu
+                </p>
+                <p class="text-xs text-slate-500">
+                    Tınaztepe Kampüsü, Buca / İzmir
+                </p>
+            </div>
+
+            <div class="flex items-center gap-6 text-slate-400">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-2 text-sm">
+                    <i data-lucide="instagram" class="w-5 h-5 text-brand-accent"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:info@deundak.org" class="hover:text-white transition flex items-center gap-2 text-sm">
+                    <i data-lucide="mail" class="w-5 h-5 text-brand-accent"></i>
+                    <span>E-Posta</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-slate-900/60 text-center text-xs text-slate-600">
+            &copy; 2026 DEÜNDAK. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

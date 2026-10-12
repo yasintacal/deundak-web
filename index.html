@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEÜNDAK - Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E64C8',
+                            dark: '#0B132B',
+                            slate: '#1C2541',
+                            accent: '#3A86FF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- NAVİGASYON -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full border-2 border-brand-accent/50 overflow-hidden bg-white p-0.5 flex items-center justify-center">
+                    <img src="logo.jpg" alt="DEÜNDAK Logo" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider text-white group-hover:text-brand-accent transition">DEÜNDAK</span>
+                    <span class="block text-[10px] text-slate-400 font-medium tracking-tight">Dokuz Eylül Üniversitesi • 1998</span>
+                </div>
+            </a>
+
+            <!-- Masaüstü Menü -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#hakkimizda" class="hover:text-white transition">Hakkımızda</a>
+                <a href="#faaliyetler" class="hover:text-white transition">Faaliyetlerimiz</a>
+                <a href="#yonetim" class="hover:text-white transition">Yönetim</a>
+                <a href="#galeri" class="hover:text-white transition">Galeri</a>
+                <a href="#iletisim" class="hover:text-white transition">İletişim</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#hakkimizda" class="block text-slate-300 hover:text-white py-1">Hakkımızda</a>
+            <a href="#faaliyetler" class="block text-slate-300 hover:text-white py-1">Faaliyetlerimiz</a>
+            <a href="#yonetim" class="block text-slate-300 hover:text-white py-1">Yönetim</a>
+            <a href="#galeri" class="block text-slate-300 hover:text-white py-1">Galeri</a>
+            <a href="#iletisim" class="block text-slate-300 hover:text-white py-1">İletişim</a>
+        </div>
+    </header>
+
+    <!-- HERO BÖLÜMÜ (DAHA BELİRGİN & NET ARKA PLAN) -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-24 px-4 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 z-0">
+            <!-- Görseli daha belirgin, doğal renkleriyle çıkaran ayar -->
+            <img src="kaynaklar1.jpg" alt="Tırmanış ve Doğa" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/60 text-xs font-semibold text-brand-accent shadow-md">
+                <span>Kuruluş: 1998</span>
+                <span>•</span>
+                <span>Tescil: 21.03.2019</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-lg">
+                Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
+                Doğada bireysel olarak var olmayı, kolektif bilinci ve dayanışmayı güçlendiriyoruz. Doğaya saygı ve spor disipliniyle zirvelerdeyiz.
+            </p>
+
+            <div class="pt-4 flex items-center justify-center gap-4">
+                <a href="#faaliyetler" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-blue hover:bg-brand-accent text-white font-medium text-sm transition shadow-lg shadow-brand-blue/30">
+                    Faaliyetlerimizi İncele
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#iletisim" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium text-sm transition backdrop-blur-sm">
+                    Bize Ulaşın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMIZDA BÖLÜMÜ -->
+    <section id="hakkimizda" class="py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 flex justify-center">
+                <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-2xl bg-slate-900 border border-slate-800 p-6 flex items-center justify-center shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-brand-blue/10 rounded-2xl blur-xl group-hover:bg-brand-blue/20 transition"></div>
+                    <img src="logo.jpg" alt="DEÜNDAK Logo" class="relative z-10 w-full h-full object-contain filter drop-shadow-md">
+                </div>
+            </div>
+
+            <div class="md:col-span-7 space-y-6">
+                <div>
+                    <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Topluluk Hakkında</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">1998'den Bugüne Doğadayız</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                    1998 yılında kurulan topluluğumuzun temel amacı, öğrenci arkadaşlarımıza dağcılık sporunu ve doğal yaşamı sevdirmektir. 
+                </p>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    Düzenlediğimiz çeşitli eğitim ve kamplarla, doğada bireysel olarak var olmayı ve en önemlisi doğaya saygı duymayı öğreniyoruz. Bu süreçte hem fiziksel hem de mental gelişimimize katkı sağlarken, etkinliklerimiz aracılığıyla kolektif bilinci güçlendirmeyi ve üyelerimiz arasındaki dayanışmayı artırmayı hedefliyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAALİYETLERİMİZ -->
+    <section id="faaliyetler" class="py-20 px-4 sm:px-6 bg-slate-900/50 border-y border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+                <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Neler Yapıyoruz?</span>
+                <h2 class="text-3xl font-bold text-white">Faaliyet Alanlarımız</h2>
+                <p class="text-slate-400 text-sm">Resmi tüzüğümüz ve disiplinimiz doğrultusunda yürüttüğümüz temel çalışmalar.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="mountain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Spor Tırmanış</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Top-rope ve lider tırmanış teknikleri, yapay tırmanış duvarı antrenmanları ve doğal kaya bahçesi tırmanışları.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="tent" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Yaz ve Kış Kampçılığı</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Dört mevsim doğa koşullarına uygun kampçılık pratikleri, çadır kurma ve doğada yaşam disiplini.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="flag" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Dağcılık ve Zirve</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Yüksek irtifa zirve tırmanışları, rota planlama, krampon-kazma kullanımı ve klasik dağcılık.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-6 hover:border-brand-blue/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brand-blue/10 border border-brand-blue/20 text-brand-accent flex items-center justify-center mb-5">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Doğa Yürüyüşleri</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Farklı zorluk derecelerine sahip trekking ve hiking parkurları ile dayanıklılık çalışmaları.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<a href="#raporlar" class="hover:text-white transition">Raporlar</a>
+
+
+   <!-- YÖNETİM & KADRO (KOMPAKT & DERLİ TOPLU) -->
+    <section id="yonetim" class="py-16 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-10 space-y-1">
+            <span class="text-brand-accent text-[11px] font-bold tracking-widest uppercase">Ekibimiz</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Yönetim & Kadro</h2>
+            <p class="text-slate-400 text-xs">Topluluk faaliyetlerimizi ve eğitimlerimizi koordine eden kadromuz.</p>
+        </div>
+
+        <!-- 1. BAŞKAN -->
+        <div class="flex justify-center mb-8">
+            <div class="bg-slate-900/90 border border-slate-800 hover:border-brand-blue/50 rounded-xl p-4 max-w-[200px] w-full text-center transition shadow-md">
+                <div class="w-16 h-16 mx-auto mb-2.5 rounded-full border-2 border-brand-blue overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                    <img src="kisiler/zehra-sulun.jpg" alt="Zehra Sülün" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-6 h-6 text-brand-accent\'></i>'; lucide.createIcons();">
+                </div>
+                <h3 class="text-sm font-bold text-white">Zehra Sülün</h3>
+                <p class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mt-0.5">Başkan</p>
+            </div>
+        </div>
+
+        <!-- 2. BAŞKAN YARDIMCILARI -->
+        <div class="mb-8">
+            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                <div class="bg-slate-900/80 border border-slate-800 hover:border-brand-blue/50 rounded-xl p-3.5 text-center transition">
+                    <div class="w-14 h-14 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/nurettin-ozgur.jpg" alt="Nurettin Özgür" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-5 h-5 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Nurettin Özgür</h3>
+                    <p class="text-[10px] text-brand-accent mt-0.5">Başkan Yrd.</p>
+                </div>
+                <div class="bg-slate-900/80 border border-slate-800 hover:border-brand-blue/50 rounded-xl p-3.5 text-center transition">
+                    <div class="w-14 h-14 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/berke-ozkaya.jpg" alt="Berke Özkaya" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-5 h-5 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Berke Özkaya</h3>
+                    <p class="text-[10px] text-brand-accent mt-0.5">Başkan Yrd.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. MALZEME SORUMLULARI -->
+        <div class="mb-8">
+            <h4 class="text-center text-[10px] font-semibold uppercase tracking-widest text-slate-500 mb-3">Malzeme Sorumluları</h4>
+            <div class="grid grid-cols-3 gap-3 max-w-xl mx-auto">
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/yasin-tacal.jpg" alt="Yasin Tacal" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Yasin Tacal</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Malzeme</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/atakan-toraman.jpg" alt="Atakan Toraman" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Atakan Toraman</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Malzeme</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/mustafa-batuhan-tuncer.jpg" alt="Mustafa Batuhan Tuncer" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">M. Batuhan Tuncer</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Malzeme</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. SOSYAL MEDYA & YAZMAN -->
+        <div class="mb-8">
+            <h4 class="text-center text-[10px] font-semibold uppercase tracking-widest text-slate-500 mb-3">İletişim & Yazmanlık</h4>
+            <div class="grid grid-cols-3 gap-3 max-w-xl mx-auto">
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/melisa-gungor.jpg" alt="Melisa Güngör" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Melisa Güngör</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Sosyal Medya</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/meltem-cimen.jpg" alt="Meltem Çimen" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Meltem Çimen</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Sosyal Medya</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/fatma-ozsoy.jpg" alt="Fatma Özsoy" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Fatma Özsoy</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Yazman</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. EĞİTMENLER (4 KİŞİ) -->
+        <div>
+            <h4 class="text-center text-[10px] font-semibold uppercase tracking-widest text-slate-500 mb-3">Eğitmenler</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/emircan-akdeniz.jpg" alt="Emircan Akdeniz" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Emircan Akdeniz</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Eğitmen</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/ibrahim-cem-gunenc.jpg" alt="İbrahim Cem Günenç" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">İ. Cem Günenç</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Eğitmen</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/semih-kaan-yildiz.jpg" alt="Semih Kaan Yıldız" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">Semih K. Yıldız</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Eğitmen</p>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 hover:border-brand-blue/40 rounded-xl p-3 text-center transition">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center text-slate-400">
+                        <img src="kisiler/inci-naz-karaman.jpg" alt="İnci Naz Karaman" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-4 h-4 text-slate-400\'></i>'; lucide.createIcons();">
+                    </div>
+                    <h3 class="text-xs font-bold text-white truncate">İnci Naz Karaman</h3>
+                    <p class="text-[9px] text-slate-400 mt-0.5">Eğitmen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- GALERİ (FİLTRELİ & KATEGORİLİ) -->
+    <section id="galeri" class="py-24 px-4 sm:px-6 bg-slate-900/30 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+                <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Kareler</span>
+                <h2 class="text-3xl font-bold text-white">Faaliyet Galerisi</h2>
+                <p class="text-slate-400 text-sm">Dağlarda, kayalarda ve patikalarda bıraktığımız izler.</p>
+            </div>
+
+            <!-- Filtre Butonları -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                <button type="button" onclick="filterGallery(event, 'all')" class="gallery-btn active px-4 py-2 rounded-lg text-xs font-semibold transition bg-brand-blue text-white shadow-md">
+                    Tümü
+                </button>
+                <button type="button" onclick="filterGallery(event, 'tirmanis')" class="gallery-btn px-4 py-2 rounded-lg text-xs font-semibold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+                    Kaya Tırmanışı
+                </button>
+                <button type="button" onclick="filterGallery(event, 'kamp')" class="gallery-btn px-4 py-2 rounded-lg text-xs font-semibold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+                    Kamplar
+                </button>
+                <button type="button" onclick="filterGallery(event, 'efeler')" class="gallery-btn px-4 py-2 rounded-lg text-xs font-semibold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+                    Doğa Yürüyüşleri
+                </button>
+            </div>
+
+            <!-- Fotoğraf Izgarası -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                
+                <!-- TIRMANIŞ (1-4) -->
+                <div class="gallery-item tirmanis aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="tirmanis/tirmanis1.jpg" alt="Kaya Tırmanışı 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item tirmanis aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="tirmanis/tirmanis2.jpg" alt="Kaya Tırmanışı 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item tirmanis aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="tirmanis/tirmanis3.jpg" alt="Kaya Tırmanışı 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item tirmanis aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="tirmanis/tirmanis4.jpg" alt="Kaya Tırmanışı 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <!-- KAMP (1-6) -->
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp1.jpg" alt="Kamp 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp2.jpg" alt="Kamp 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp3.jpg" alt="Kamp 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp4.jpg" alt="Kamp 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp5.jpg" alt="Kamp 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item kamp aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="kamp/kamp6.jpg" alt="Kamp 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+                <!-- DOĞA YÜRÜYÜŞLERİ (1-4) -->
+                <div class="gallery-item efeler aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="efeler/efeler1.jpg" alt="Doğa Yürüyüşü 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item efeler aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="efeler/efeler2.jpg" alt="Doğa Yürüyüşü 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item efeler aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="efeler/efeler3.jpg" alt="Doğa Yürüyüşü 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="gallery-item efeler aspect-square rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative">
+                    <img src="efeler/efeler4.jpg" alt="Doğa Yürüyüşü 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM & ALT BİLGİ -->
+    <footer id="iletisim" class="py-16 px-4 sm:px-6 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start gap-2">
+                    <span class="text-lg font-bold text-white">DEÜNDAK</span>
+                    <span class="text-xs text-slate-500">• 1998</span>
+                </div>
+                <p class="text-xs text-slate-400 max-w-sm">
+                    Dokuz Eylül Üniversitesi Dağcılık Arama Kurtarma ve Doğa Sporları Topluluğu
+                </p>
+                <p class="text-xs text-slate-500">
+                    Tınaztepe Kampüsü, Buca / İzmir
+                </p>
+            </div>
+
+            <!-- Sosyal / İletişim (Doğrudan @deundak Bağlantısı) -->
+            <div class="flex items-center gap-6 text-slate-400">
+                <a href="https://www.instagram.com/deundak" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-2 text-sm bg-slate-900/80 px-4 py-2 rounded-lg border border-slate-800 hover:border-brand-accent">
+                    <i data-lucide="instagram" class="w-5 h-5 text-brand-accent"></i>
+                    <span class="font-medium text-slate-200">@deundak</span>
+                </a>
+                <a href="mailto:info@deundak.org" class="hover:text-white transition flex items-center gap-2 text-sm bg-slate-900/80 px-4 py-2 rounded-lg border border-slate-800 hover:border-brand-accent">
+                    <i data-lucide="mail" class="w-5 h-5 text-brand-accent"></i>
+                    <span class="font-medium text-slate-200">E-Posta</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-slate-900/60 text-center text-xs text-slate-600">
+            &copy; 2026 DEÜNDAK. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
